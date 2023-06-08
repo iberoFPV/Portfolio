@@ -283,3 +283,32 @@ background-color: red;
     font-size: 1.3rem;
 }
 
+/* Album tareas*/
+
+.album {
+    background-color: whitesmoke;
+}
+
+@media (min-width: 768px) {
+    .album {
+        display: flex;
+        width: 600px;
+        height: 430px;
+        background-color: white;
+    }
+    
+    .img_album {
+        width: 0;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+    }
+    .img_album:hover {
+        cursor: crosshair;
+        width: 300px;
+        opacity: 1;
+        filter: contrast(120%);
+    
+    }
+}
