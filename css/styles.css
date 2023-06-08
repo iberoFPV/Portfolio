@@ -1,0 +1,285 @@
+/*Paleta de colores*/
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #70dbd6;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --gris_claro: #dfe9f3;
+    --gris_oscuro: #323252;
+    --verde_oscuro: rgb(50, 100, 96);
+    --Fuente_principal: 'Roboto Mono', monospace; 
+}
+
+/* Globales */
+/*HTML Y BODY se inician asi para poder utilizar todo el potencial de los rem(tamaño de texto)
+y poder abrir la pag web en cuyalquier navegador */
+html{
+    font-size: 62.5%;
+    /*Box model*/
+    box-sizing: border-box;
+    /*Scrool de navegacion*/
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {/*con este selector (*) hacemos que le pase los parametros de box model a todos los elementos */
+    box-sizing: inherit;
+}
+
+/*Box model*/
+body{
+    font-size: 16px; /* 1rem = 10px*/
+    font-family: var(--Fuente_principal);
+    /*Degradado de fondo completo de la pag web*/
+    background-image: linear-gradient(to top, var(--gris_claro)0%, var(--blanco) ) ;/*Degradamos de abajo hacia arriba*/
+}
+
+/* Titulo */
+.titulo {
+    font-family: var(--Fuente_principal);
+    background-color: var(--verde_oscuro);/* Damos color al fondo del titulo */
+    margin-bottom: .4rem; /* Quitamos el espacio con la parte de la imagen */
+    margin-top: 0rem;/* Quitamos espacio con la parte de arriba */
+    text-align: center;
+    color: var(--negro);
+}
+
+/*imagen*/
+.imagen {
+    background-repeat: no-repeat;/*Para que la imagen no se repita al hacer mas pequeña la pantalla de la web*/
+    background-size: cover; /*Para que la imagen ocupe todo su espacio*/
+    height: 450px;/* Tamaño de imagen */
+    /* Hacemos que la imagen se adapte a distintos formatos de pantalla */
+    width: 100%;
+    height: 100%;
+}
+
+/* Navegacion principal */
+.navegacion_principal {
+    background-color: var(--secundario);
+    font-size: 3rem;
+    text-align: center;
+    display: flex;/* Activamos flex para mover la navegacion */
+    flex-direction: column;/* la ponemos toda en columna */
+    /* Estrechamos la barra por los laterales */
+    margin-top: 1rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    border-radius: .7rem;/* hacemos los bordes de la barra redondeados */
+}
+/* Creamos un media queri para que la navegacion se ajuste a pantallas mas grandes */
+@media (min-width: 768px) {
+    .navegacion_principal {
+        flex-direction: row;
+        justify-content:space-around;/* Hacemos que se repartan por la pantalla */
+        height: 36px;/* barra de navegacion mas estrecha */
+        font-size: 2rem;/* Tamaño letra */
+    }
+    
+}
+
+/* Creamos un media queri para los botones de la navegacion en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navegacion_principal, a {
+        /* Damos espacio entre botones */
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+/* Enlaces de la navegacion */
+.navegacion_principal, a {
+    text-decoration: none;/* Quitamos la linea que sale por defecto en los enlaces */
+    color: var(--negro);
+    margin-bottom: 1.5rem;
+}
+.navegacion_principal a:hover {
+    background-color: #70dbd6;
+    color: var(--gris_claro);
+    height: 100%;/* Hacemos que se resalte el fondo en todo el icono al pasar el raton */
+}
+
+/* Nombre */
+.recuadro-name {
+    background-color: #ebf0ef;/* Damos color al fondo del titulo */
+    border-radius: .7rem;/* hacemos los bordes de la barra redondeados */
+}
+/* Adaptamos la barra de color a diferentes tamaños de pantalla */
+@media (min-width: 768px) {
+    .recuadro-name {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+    
+}
+.nombre {
+    font-family: var(--Fuente_principal);
+    color: var(--negro);
+    text-align: center;/* Centramos el nombre */
+    margin-top: 0rem;/* Quitamos espacios de arriba */
+}
+
+/* Sombra */
+.sombra{
+    /*Sombra creada en la web cssmatic.com*/
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(107,107,107,0.6);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(107,107,107,0.6);
+    box-shadow: 0px 5px 20px 0px rgba(107,107,107,0.6);
+    /*Color de fondo del recuadro */
+    background-color: var(--blanco);
+    margin: 1rem;
+    padding: 5rem;
+    border-radius: 1rem;/*Esquinas del recuadro central*/
+}
+
+/* Dos columnas */
+@media (min-width: 992px) {
+    .dos-columnas {
+        display: grid; /* Para obtener las propiedades de grid */
+        grid-template-columns: 50% 50%;/* Hacemos que se creen dos columnas, siempre el max es 100% */
+    }
+
+    .entrada-blog{
+        font-size: 2rem;
+    }
+    /* Acercamos las columnas para quitar espacio entre ellas */
+    .izquierda {
+        padding-right: 3rem;
+    }
+    .derecha {
+        padding-left: 3rem;
+    }
+}
+/* Texto */
+.descripcion {
+    font-family: var(--Fuente_principal);
+    color: var(--gris_oscuro);
+    font-size: 2rem;
+    display: flex;/*Habilitamos el display para posicionarlos en su sitio*/
+    flex-direction: column;/*Los posicionamos en columna*/
+    align-items: center;/*Centrara el contenido*/
+    padding-top: 3rem; /* Damos espacio con lkas columnas de arriba */
+}
+@media (min-width: 768px) {
+    .descripcion, p {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+/* formulario */
+.formulario{
+    background-color: rgb(50, 100, 96);/* color de fondo */
+    margin: 0 auto; /* Centramos el formulario */
+    padding: 2rem; /* Lo centramos en todas las direcciones del recuadro */
+    border-radius: 1rem;/* Esquinas redondeadas */
+}
+@media (min-width: 768px) {
+    .formulario {
+        width: min(60rem, 100%); /* Regulamos el tamaño del formulario */
+    }
+    
+}
+
+.formulario fieldset { /* Quitamos la linea que bordea el formulario */
+    border: none;
+}
+.formulario legend {
+    text-align: center;/*Texto centrado horizontalmente*/
+    font-size: 1.8rem;/*Tamaño de la fuente*/
+    text-transform: uppercase;/*Mayusculas*/
+    font-weight: 700;/*Para que este en negrita*/
+    margin-bottom: 2rem;/*Para separar el primer texto del primer input*/
+    color: var(--negro);
+}
+
+.contenedor-campos {
+
+    margin-right: 3rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);/*Creamos dos columnas en el formulario*/
+        column-gap: 5rem;/*Separacion de las columnas*/
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;/*Separacion hacia abajo entre los campos*/
+}
+.campo label {
+    color: var(--blanco);/*Color del texto en blanco*/
+    font-weight: bold;/*Texto en negrita*/
+    margin-bottom: .5rem;/*Separar los textos unos de otros con sus imputs*/
+    display: block; /*Toma todo el espacio disponible*/
+}
+.campo textarea {
+    height: 20rem;
+    resize: vertical;
+}
+/* Para cuando tenemos diferentes type de inputs
+.campo input[type="text"],
+.campo input[type="tel"] {
+background-color: red;
+}
+*/
+.input-text {
+    width: 100%;/*Para que tome todo el espacio dispopnible*/
+    border: none;/*Quitamos el borde de los input*/
+    padding: 1.5rem;/*Hacemos los input mas grandes*/
+    border-radius: .5rem;/*Esquinas redondeadas*/
+}
+
+/*boton enviar*/
+.w-sm-100 {/*Creamos una clase*/
+    width: 100%;
+}
+/*Creamos media queris*/
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;/*Para que el bopton se auto ajuste a las diferentes pantallas*/
+    }
+}
+/*Alineamos el boton del lado derecho con flex y alinear derecha*/
+.flex{
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: flex-end;
+}
+.boton{
+    background-color: var(--secundario);/*Color de fondo*/
+    color: var(--blanco);/*Color del texto*/
+    padding: 1rem 3rem;/*arriba derecha abajo izquierda esto seria lo mismo asi pero se repiten los valores asi que se simplifica padding: 1rem 3rem 1rem 3rem*/
+    margin-top: 3rem;/*Para tener separacion entre los elementos de arriba*/
+    font-size: 2rem;/*Texto mas grande*/
+    text-decoration: none;/*Quitamos la linea que aparece por defecto debajo del texto*/
+    text-transform: uppercase;/*Ponemos el texto con mayusculas*/
+    font-weight: bold;/*Texto en negrita*/
+    border-radius: .5rem;/*Esquinas redondeadas*/
+    width: 90%;/*Para que se agrande el boton en aplicaciones movil*/
+    text-align: center;/*Para centrar el texto en el boton*/
+    border: none;/*Quitamos el borde a los botones*/
+}
+/*Creamos un media quit con mq para que el boton se resetee dependiendo de la pantalla en la que se reproduce*/
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+.boton:hover {/*Para cuando nos colocamos encima de un elemento*/
+    cursor: pointer;/*Nos regresa la mano en el formulario (enviar) por que la elimina cuando se le aplican estilos*/
+}
+
+
+/* Final de pagina */
+.footer {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
