@@ -312,3 +312,30 @@ background-color: red;
     
     }
 }
+
+/* Buscadores */
+.buscadores {
+    background-color:rgb(133, 206, 230);
+    margin-top: 3rem;
+}
+.nombre_buscador {
+    text-align: center;
+    font-size: 2rem;
+}
+.espacio {
+    margin-top: 2rem;
+}
+
+/* Dos columnas */
+@media (min-width: 992px) {
+    /* Acercamos las columnas para quitar espacio entre ellas */
+    .left {
+        padding-left: 2rem;
+        padding-right: 20rem;
+    }
+    .right {
+        padding-right: 2rem;
+        padding-left: 20rem;
+    }
+}
+

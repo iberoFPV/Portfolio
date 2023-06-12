@@ -88,19 +88,61 @@
     </nav>
 
     <main class="contenedor sombra">
-        <section>
-            <p class="gallery-description">Esta galería se ha creado utilizando CSS para lograr efectos de animación en pantallas con un ancho mayor a 768px. Para ver la ampliación de las imágenes, desliza el cursor sobre ellas.</p>
-        </section>
-        <div class="recuadro">
-            <section class="album formulario">
-                <img class="img_album imagen" src="img_album/xhtml5.jpg" alt="">
-                <img class="img_album imagen" src="img_album/css3.jpg" alt="">
-                <img class="img_album imagen" src="img_album/javascript.jpg" alt="">
-                <img class="img_album imagen" src="img_album/python.jpg" alt="">
-            </section>
-
-
+        <div class="recuadro-name">
+            <h2 class="nombre">
+                Buscadores 
+            </h2>
         </div>
+
+        <article class="dos-columnas">
+
+            <div class="right">
+                <form class="formulario buscadores" action="https://www.google.es/search" name="registro" method="get" target="_blank">
+                    <p class="nombre_buscador">Busca en Google</p>
+                    <input class="input-text espacio" type="text" name="q" placeholder="Ingrese su búsqueda"> <br>
+                    <input class="boton w-sm-100" type="submit" value="Buscar">
+                </form>
+            </div>
+
+            <div class="left">
+                <form class="formulario buscadores" action="https://stackoverflow.com/search" method="get" target="_blank">
+                    <p class="nombre_buscador">Buscar en Stack Overflow</p>
+                    <input class="input-text espacio" type="text" name="q" placeholder="Ingrese su búsqueda" required> <br>
+                    <input class="boton w-sm-100" type="submit" value="Buscar">
+                </form>
+            </div>
+
+            <div class="right">
+                <form class="formulario buscadores" action="https://www.youtube.com/results" method="get" target="_blank">
+                    <p class="nombre_buscador">Buscar en YouTube</p>
+                    <input class="input-text espacio" type="text" name="search_query" placeholder="Ingrese su búsqueda" required> <br>
+                    <input class="boton w-sm-100" type="submit" value="Buscar">
+                </form>                
+            </div>
+
+
+            <div class="left">
+                <form class="formulario buscadores" action="https://es.wikipedia.org/wiki/Especial:Buscar" method="get" target="_blank">
+                    <p class="nombre_buscador">Buscar en Wikipedia</p>
+                    <input class="input-text espacio" type="text" name="search" placeholder="Ingrese su búsqueda" required> <br>
+                    <input class="boton w-sm-100" type="submit" value="Buscar">
+                </form>                
+            </div>
+
+        </article>
+
+        <article>
+            <form class="formulario buscadores" action="https://www.booking.com/searchresults.es.html" name="bookingForm" method="get" target="_blank">
+                <p class="nombre_buscador">Encuentra tu hotel en Booking</p>
+                <input class="input-text espacio" type="text" name="ss" placeholder="Destino" required> <br>
+                <input class="input-text espacio" type="date" name="checkin_date" required> <br>
+                <input class="input-text espacio" type="date" name="checkout_date" required> <br>
+                <input class="input-text espacio" type="number" name="group_adults" min="1" max="30" placeholder="Adultos" required> <br>
+                <input class="input-text espacio" type="number" name="group_children" min="0" max="10" placeholder="Niños"> <br>
+                <input class="boton w-sm-100" type="submit" value="Buscar">
+            </form>
+        </article>
+        
     </main>
     <footer class="footer">
         <p>Todos los derechos reservados Bruno Orgilles</p>
