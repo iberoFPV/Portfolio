@@ -115,9 +115,39 @@
                     medios que encontrarás en mi sitio web. ¡Gracias por visitar!
                 </p>
             </article>
-
         </div>
     </main>
+
+
+
+    <script>
+        // Verificar si la clave "visitas" existe en el almacenamiento local
+        if (localStorage.getItem("visitas")) {
+            // Obtener el valor actual de visitas almacenado en el almacenamiento local
+            var visitas = parseInt(localStorage.getItem("visitas"));
+            // Incrementar el contador de visitas en 1
+            visitas = visitas + 1;
+            // Actualizar el valor de visitas en el almacenamiento local
+            localStorage.setItem("visitas", visitas);
+        } else {
+            // Si la clave "visitas" no existe, establecer el contador de visitas en 1 y almacenarlo en el almacenamiento local
+            localStorage.setItem("visitas", 1);
+        }
+    </script>
+
+    <p>Visitas: <span id="contador-visitas"></span></p>
+
+    <script>
+        // Obtener el elemento del contador de visitas
+        var contadorVisitas = document.getElementById("contador-visitas");
+
+        // Obtener el valor de visitas almacenado en el almacenamiento local
+        var visitas = parseInt(localStorage.getItem("visitas"));
+
+        // Mostrar el valor actual del contador de visitas
+        contadorVisitas.textContent = visitas;
+    </script>
+
     <footer class="footer">
         <p>Todos los derechos reservados Bruno Orgilles</p>
     </footer>
