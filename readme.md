@@ -10,4 +10,4 @@ I sincerely appreciate any feedback, suggestions, or contributions you may have 
 
 Stay tuned for updates on this website, as there will always be something new to discover! 🌟🔔
 
-You can visit my website at the following Netlify address: https://ibero-web.netlify.app/. This page is associated with GitHub, which means that any changes I make will be reflected in this link. I hope you enjoy exploring my project!🌐😊
+You can visit my website at the following Netlify address: https://iberofpv.github.io/my_website/. This page is associated with GitHub, which means that any changes I make will be reflected in this link. I hope you enjoy exploring my project!🌐😊
