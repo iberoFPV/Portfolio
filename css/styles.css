@@ -33,25 +33,43 @@ body{
     /*Degradado de fondo completo de la pag web*/
     background-image: linear-gradient(to top, var(--gris_claro)0%, var(--blanco) ) ;/*Degradamos de abajo hacia arriba*/
 }
+header {
+    position: relative;
+}
 
+.contenido-header {
+    position: relative;
+}
 /* Titulo */
 .titulo {
+    color:var(--gris_claro);
+    position: absolute;
     font-family: var(--Fuente_principal);
-    background-color: var(--verde_oscuro);/* Damos color al fondo del titulo */
-    margin-bottom: .4rem; /* Quitamos el espacio con la parte de la imagen */
-    margin-top: 0rem;/* Quitamos espacio con la parte de arriba */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     text-align: center;
-    color: var(--negro);
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.718);
+/*     background-color: var(--verde_oscuro); *//* Damos color al fondo del titulo */
+    /* margin-bottom: .4rem; Quitamos el espacio con la parte de la imagen */
+    /* margin-top: 0rem;Quitamos espacio con la parte de arriba */
+    text-align: center;
+    /* color: var(--negro); */
+}
+@media (min-width: 765px) {
+    .titulo {
+        font-size: 60px;
+        width: 100%;
+    }
 }
 
 /*imagen*/
 .imagen {
-    background-repeat: no-repeat;/*Para que la imagen no se repita al hacer mas pequeña la pantalla de la web*/
-    background-size: cover; /*Para que la imagen ocupe todo su espacio*/
-    height: 450px;/* Tamaño de imagen */
+    max-height: 750px;/* Tamaño de imagen */
     /* Hacemos que la imagen se adapte a distintos formatos de pantalla */
     width: 100%;
-    height: 100%;
 }
 
 /* Navegacion principal */
