@@ -40,12 +40,65 @@ header {
 .contenido-header {
     position: relative;
 }
+/* Efecto maquina de escribir */
+.span {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-family: var(--Fuente_principal);
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: moccasin;
+    /* color:var(--negro); */
+    font-weight: bold;
+    display: inline-block; /* Agrega esta línea para mostrar el texto en dos filas */
+    white-space: normal;
+}
+.contacto {
+    width: 38%;
+}
+span{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 19ch;
+    animation: typing 3s steps(19), blink .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+@media (max-width: 400px) {
+    .contacto {
+        width: 50%;
+    }
+}
+@media (min-width: 765px) {
+    .span {
+        white-space: nowrap;
+        font-size: 60px;
+        width: 53%;
+    }
+    .contacto {
+        width: 25%;
+    }
+}
+
+@keyFrames typing {
+    from { width: 0}
+}
+
+@keyFrames blink {
+    50% { border-color: transparent}
+}
+
+
 /* Titulo */
 .titulo {
     color:var(--gris_claro);
     position: absolute;
     font-family: var(--Fuente_principal);
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -55,11 +108,11 @@ header {
 /*     background-color: var(--verde_oscuro); *//* Damos color al fondo del titulo */
     /* margin-bottom: .4rem; Quitamos el espacio con la parte de la imagen */
     /* margin-top: 0rem;Quitamos espacio con la parte de arriba */
-    text-align: center;
     /* color: var(--negro); */
 }
 @media (min-width: 765px) {
     .titulo {
+        top: 20%;
         font-size: 60px;
         width: 100%;
     }
