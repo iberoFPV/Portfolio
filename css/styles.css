@@ -52,34 +52,45 @@ header {
     color: moccasin;
     /* color:var(--negro); */
     font-weight: bold;
-    width: 50%;
+    width: 55%;
 }
 .contacto {
-    width: 40%;
+    padding-top: 4rem;
+    width: 55%;
 }
 span{
     display: block;
     font-family: monospace;
     white-space: nowrap;
-    border-right: 4px solid;
+    /* border-right: 4px solid; */ /* Cursor */
     width: 12ch;
     animation: typing 3s steps(12), blink .5s infinite step-end alternate;
     overflow:hidden;
 }
 
-@media (max-width: 400px) {
-    .contacto {
-        width: 50%;
-    }
-}
-@media (min-width: 765px) {
+@media (min-width: 768px) {
     .span {
+        padding-bottom: 2rem;
         white-space: nowrap;
-        font-size: 60px;
-        width: 30%;
+        font-size: 47px;
+        width: 45%;
     }
     .contacto {
-        width: 25%;
+        padding-bottom: 7rem;
+        font-size: 47px;
+        width: 45%;
+    } 
+}
+
+@media (max-width: 480px) {
+    .span {
+        padding-top: 3rem;
+        font-size: 20px;
+    }
+
+    .contacto {
+        width: 65%;
+        font-size: 20px;
     }
 }
 
@@ -119,7 +130,7 @@ span{
 
 /*imagen*/
 .imagen {
-    max-height: 750px;/* Tamaño de imagen */
+    max-height: 1000px;/* Tamaño de imagen */
     /* Hacemos que la imagen se adapte a distintos formatos de pantalla */
     width: 100%;
 }
